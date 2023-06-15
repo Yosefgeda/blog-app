@@ -58,6 +58,7 @@
 
 - Project with postgres database.
 - Tables and foreignkeys assosciated.
+- Associations between models implimented.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -71,6 +72,7 @@
 <!-- GETTING STARTED -->
 ## 💻 Getting Started <a name="getting-started"></a>
 
+> Install ruby and ruby on rails on your system. 
 > Check the db/schema.rb file to view the tables and associations.
  
 
@@ -97,10 +99,13 @@ Inside you will find all the necessary files.
 Linters have been installed for this project(npm install).
 Added a gitignore file and included the node_modules and text.md files.
 Linter actions are integreated witg github.
+Install Ruby, ROR and Postgresql on your system.
 
 ### Usage
-execute the following steps:
-To run the project on the html file run it through liveserver.
+Execute the following steps:
+Inside the blog-app directory run "bundle install" to install all the dependencys.
+Run "rails server" then every thing shoud work as intended.
+
 
 ### Run tests
  run rubocop 
