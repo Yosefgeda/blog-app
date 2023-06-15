@@ -59,6 +59,7 @@
 - Project with postgres database.
 - Tables and foreignkeys assosciated.
 - Associations between models implimented.
+- Model validations and rspec tests are added.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -110,6 +111,8 @@ Run "rails server" then every thing shoud work as intended.
 ### Run tests
  run rubocop 
  and npx stylelint "**/*.{css,scss}"
+
+ - run 'rspec' to run all model tests
 
 
 ### Deployment
