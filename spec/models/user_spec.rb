@@ -21,7 +21,6 @@ RSpec.describe User, type: :model do
     post2.save
     post3.save
 
-
     recent_posts = user.three_recent_posts
 
     expect(recent_posts.map(&:title)).to eq(['Third Post', 'Second Post', 'First Post'])
