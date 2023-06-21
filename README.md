@@ -61,6 +61,7 @@
 - Associations between models implimented.
 - Model validations and rspec tests are added.
 - Controllers and dummy views are added.
+- rspec testing for controllers.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
