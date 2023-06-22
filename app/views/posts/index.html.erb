@@ -18,13 +18,11 @@
             
         </div>
         </a>
-        <% post.comments.each do |comment| %>
+        <% post.five_recent_comments.each do |comment| %>
             <div class="user-comments">
               <div>Comment: <%= comment.text %></div>
             </div>
           <% end %>
     <% end %>
   </div>
-  
-  
 </div>
