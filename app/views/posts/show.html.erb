@@ -1,1 +1,18 @@
-<p>One post of a user</p>
+<div class="post-of-user">
+        <div class="post-comment">        
+            <div class="post-user">Post <%= @post.id%> by <%= @user.name %>
+                <div>Comments: <%= @post.comments_counter%> Likes: <%= @post.likes_counter%></div>
+            </div>
+            <div class="post-text"><%= @post.text %></div>
+        </div>
+        
+        
+        
+        <div>
+            <% @post.five_recent_comments.each do |comment| %>
+                <div class="user-comments">
+                <div>Comment: <%= comment.text %></div>
+                </div>
+            <% end %>
+        </div>
+</div>

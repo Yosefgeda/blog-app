@@ -1,1 +1,28 @@
 <p>Posts by user</p>
+<div class="posts-container">
+    <div class="img-post">
+            <img src="<%= @user.photo %>"/>
+        <div class="name-posts">
+            <div class="name"><%= @user.name %></div>
+            Number of posts: <%= @user.posts_counter %>
+        </div>   
+  </div>
+ 
+  <div class="posts">
+    <% @user.posts.each do |post| %>
+        <a href="<%= user_post_path(@user, post) %>">
+        <div class="user-posts" ">
+            
+                <div>Post <%= post.id%><br/><%= post.title %></div>
+                <div class="com-like">Comments: <%= post.comments_counter%> Likes: <%= post.likes_counter%></div>
+            
+        </div>
+        </a>
+        <% post.five_recent_comments.each do |comment| %>
+            <div class="user-comments">
+              <div>Comment: <%= comment.text %></div>
+            </div>
+          <% end %>
+    <% end %>
+  </div>
+</div>

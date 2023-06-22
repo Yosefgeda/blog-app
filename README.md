@@ -62,6 +62,7 @@
 - Model validations and rspec tests are added.
 - Controllers and dummy views are added.
 - rspec testing for controllers.
+- Views are added
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -118,7 +119,7 @@ Run "rails server" then every thing shoud work as intended.
 
 
 ### Deployment
-NOt available
+Not available
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
