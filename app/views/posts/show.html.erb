@@ -1,12 +1,18 @@
 <div class="post-of-user">
         <div class="post-comment">        
-            <div class="post-user">Post <%= @post.id%> by <%= @user.name %>
-                <div>Comments: <%= @post.comments_counter%> Likes: <%= @post.likes_counter%></div>
+            <div class="post-user">
+                Post <%= @post.id%> by <%= @user.name %>
             </div>
-            <div class="post-text"><%= @post.text %></div>
+            <div>Comments: <%= @post.comments_counter%> Likes: <%= @post.likes_counter%></div>
         </div>
+        <div class="post-text">Comment: <%= @post.text %></div>
         
-        
+        <div class = "btn_comment_like">
+            <button class = 'btn_add_comment'><%= link_to 'Add Comment', new_comment_path%></button>
+            <%= form_with model: @likes do |form| %>
+                <%= form.submit "Add Likes", class: 'btn_add_likes' %>
+            <% end %>
+        </div>
         
         <div>
             <% @post.five_recent_comments.each do |comment| %>
