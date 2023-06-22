@@ -1,1 +1,20 @@
-<p>Here is a list of posts for a given user</p>
+<div class="posts-container">
+    <div class="img-post">
+            <img src="<%= @user.photo %>"/>
+        <div class="name-posts">
+            <div class="name"><%= @user.name %></div>
+            Number of posts: <%= @user.posts_counter %>
+        </div>   
+  </div>
+  <div>Bio: <%= @user.bio %></div>
+  <div class="posts">
+    <% @user.posts.each do |post| %>
+        <div class="user-posts" ">
+            <div>Post <%= post.id%><br/><%= post.title %></div>
+            <div class="com-like">Comments: <%= post.comments_counter%> Likes: <%= post.likes_counter%></div>
+        </div>
+    <% end %>
+  </div>
+  <a class="show-all-posts" href="<%= user_posts_path(@user) %>">Show all Posts</a>
+</div>
+
