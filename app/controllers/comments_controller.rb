@@ -12,7 +12,7 @@ class CommentsController < ApplicationController
     puts comment_params
     puts @post
     if @comment.save
-        redirect_to "/users/#{current_user.id}/posts", notice: 'Comment Created Successfully'
+      redirect_to "/users/#{current_user.id}/posts", notice: 'Comment Created Successfully'
     else
       render :new
     end
