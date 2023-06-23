@@ -108,6 +108,9 @@
 .post-comment {
   background-color: #f0f0f0;
   padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .post-text {
@@ -122,4 +125,119 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.btn_comment_like {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn_add_comment,
+.btn_add_likes {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn_add_likes {
+  background-color: #28a745;
+}
+
+.new_post {
+  margin-bottom: 20px;
+}
+
+.new_post h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.back_to_posts {
+  margin-bottom: 10px;
+}
+
+.add_new_post {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.new_post_title label,
+.new_post_text label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.new_post_title input,
+.new_post_text textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+  resize: vertical;
+}
+
+.btn_new_post {
+  margin-top: 10px;
+}
+
+.btn_create_post {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn_create_post:hover {
+  background-color: #0056b3;
+}
+
+.new_comment {
+  margin-bottom: 20px;
+}
+
+.new_comment h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.comment_text label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.comment_text textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+  resize: vertical;
+}
+
+.btn_create_new_comment {
+  margin-top: 10px;
+}
+
+.btn_create_comment {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn_create_comment:hover {
+  background-color: #0056b3;
 }
