@@ -8,7 +8,7 @@ RSpec.describe 'User Index Page', type: :feature do
       @user2 = User.create(name: 'Tom', photo: 'https://icons.iconarchive.com/icons/iconsmind/outline/256/User-icon.png',
                            bio: 'Teacher from India.', posts_counter: 1)
       @user3 = User.create(name: 'Yosef Geda', photo: 'https://icons.iconarchive.com/icons/iconsmind/outline/256/User-icon.png',
-                            bio: 'Teacher from Ethiopia.', posts_counter: 1)
+                           bio: 'Teacher from Ethiopia.', posts_counter: 1)
     end
 
     it 'should show list of all users' do
@@ -34,13 +34,13 @@ RSpec.describe 'User Index Page', type: :feature do
     end
 
     it 'should navigate to user show page when a user is clicked' do
-        visit users_path
-  
-        # Click on the user link
-        click_link @user1.name
-  
-        # Verify redirection to the user's show page
-        expect(page).to have_current_path(user_path(@user1))
+      visit users_path
+
+      # Click on the user link
+      click_link @user1.name
+
+      # Verify redirection to the user's show page
+      expect(page).to have_current_path(user_path(@user1))
     end
   end
 end
