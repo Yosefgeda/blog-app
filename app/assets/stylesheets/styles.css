@@ -244,3 +244,20 @@
 
 
 /* Log In */
+.input-field {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
