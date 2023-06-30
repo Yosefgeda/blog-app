@@ -8,7 +8,15 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    if params[:id] == 'sign_out'
+      sign_out(current_user)
+      redirect_to root_path, notice: 'You have been signed out successfully.'
+    else
+      @user = User.find(params[:id])
+      if @user.nil?
+        redirect_to root_path, alert: 'User not found.'
+      end
+    end
   end
 
   def new
