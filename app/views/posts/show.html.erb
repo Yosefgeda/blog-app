@@ -6,6 +6,10 @@
             </div>
             <div>Comments: <%= @post.comments_counter%> Likes: <%= @post.likes_counter%></div>
             
+            <% if can? :destroy, @post %>
+                <%= form_with(url: user_post_path(@post.author, @post), method: :delete) do |f| %>
+                <%= f.submit 'Delete Post' %>
+            <% end %>
         <% end %>
         </div>
         <div class="post-text">Comment: <%= @post.text %></div>
@@ -22,7 +26,11 @@
                 <div class="user-comments">
                 <div>Comment: <%= comment.text %></div>
                 </div>
-                
+                <% if can? :destroy, comment %>
+                    <%= form_with(url: comment_path(@user, @post, comment), method: :delete) do |f| %>
+                    <%= f.submit 'Delete Comment' %>
+                    <% end %>
+                <% end %>
             <% end %>
         </div>
 
