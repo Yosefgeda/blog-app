@@ -1,12 +1,10 @@
 class CommentsController < ApplicationController
   load_and_authorize_resource
 
-
   def index
     @user = User.includes(:posts).find(params[:author_id])
     @post = @user.posts
     @comments = Comment.where(posts: @post)
-
 
     respond_to do |format|
       format.html
