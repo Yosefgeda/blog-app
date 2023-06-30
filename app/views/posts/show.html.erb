@@ -1,10 +1,12 @@
 <div class="post-of-user">
         <div class="post-comment">        
             <div class="post-user">
-                Post <%= @post.id%> by <%= @user.name %>
-                Title <%= @post.title%> 
+                Post <%= @post.id%> by <%= @user.name %><br/>
+                Title: <%= @post.title%> 
             </div>
             <div>Comments: <%= @post.comments_counter%> Likes: <%= @post.likes_counter%></div>
+            
+        <% end %>
         </div>
         <div class="post-text">Comment: <%= @post.text %></div>
         
@@ -20,10 +22,13 @@
                 <div class="user-comments">
                 <div>Comment: <%= comment.text %></div>
                 </div>
+                
             <% end %>
         </div>
 
         <div>
             <button id="home-button" class = 'btn_add_comment'><%= link_to 'Home', root_path%></button>
         </div>
+
+        
 </div>
