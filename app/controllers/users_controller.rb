@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @users = User.all
   end
@@ -12,7 +14,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(name)
+    @user = User.new(user_params)
     return unless @user.save
 
     redirect_to action: 'list'

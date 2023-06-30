@@ -241,3 +241,23 @@
 .btn_create_comment:hover {
   background-color: #0056b3;
 }
+
+/* Log In */
+
+.input-field {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
