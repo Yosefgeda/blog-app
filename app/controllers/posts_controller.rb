@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   def index
     @user = User.find(params[:author_id])
     @posts = @user.posts
-    
+
     respond_to do |format|
       format.html
       format.json { render json: @posts }
