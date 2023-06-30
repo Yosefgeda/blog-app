@@ -1,6 +1,21 @@
 class CommentsController < ApplicationController
+  load_and_authorize_resource
+
+
+  def index
+    @user = User.includes(:posts).find(params[:author_id])
+    @post = @user.posts
+    @comments = Comment.where(posts: @post)
+
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @comments }
+    end
+  end
+
   def new
-    @user = User.find(params[:user_id])
+    @user = User.find(params[:author_id])
     @post = Post.find(params[:post_id])
     @comment = Comment.new
   end

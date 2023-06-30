@@ -7,6 +7,20 @@ Rails.application.routes.draw do
     get '/users/sign_out', to: 'devise/sessions#destroy'
   end
 
+  # namespace :api do
+  #   get '/users/:author_id/posts', to: 'posts#index'
+  #   post '/comments', to: 'comments#create'
+  #   get '/users/:author_id/posts/:post_id/comments', to: 'comments#index'
+  # end
+
+  namespace :api do
+    resources :users do
+      resources :posts do
+        resources :comments
+      end
+    end
+  end
+
   resources :users do
     resources :posts do
       resources :comments, only: [:new, :create, :destroy]
