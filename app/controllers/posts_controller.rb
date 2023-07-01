@@ -1,13 +1,17 @@
 class PostsController < ApplicationController
   load_and_authorize_resource
   def index
-    @user = User.find(params[:user_id])
+    @user = User.find(params[:author_id])
     @posts = @user.posts
-    @current_user = current_user
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @posts }
+    end
   end
 
   def show
-    @user = User.find(params[:user_id])
+    @user = User.find(params[:author_id])
     @post = @user.posts.find(params[:id])
   end
 
